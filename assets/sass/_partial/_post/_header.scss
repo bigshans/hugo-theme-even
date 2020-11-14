@@ -10,6 +10,7 @@
 
   .post-link {
     @include underline-from-center;
+    color: $pure-black;
   }
 
   .post-meta {

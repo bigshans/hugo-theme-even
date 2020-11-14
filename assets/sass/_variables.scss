@@ -24,7 +24,8 @@ $theme-color-map: (
 $theme-color-list: map-get($theme-color-map, $theme-color-config);
 
 // Default theme color of the site.
-$theme-color: nth($theme-color-list, 1) !default;
+// $theme-color: nth($theme-color-list, 1) !default;
+$theme-color: #c05b4d !default;
 
 // Deputy theme color of the site.
 $deputy-color: nth($theme-color-list, 2) !default;
@@ -32,6 +33,7 @@ $deputy-color: nth($theme-color-list, 2) !default;
 
 // ========== Color ========== //
 $black: #555 !default;
+$pure-black: #000 !default;
 $white: #fefefe !default;
 $light-gray: #e6e6e6 !default;
 $gray: #cacaca !default;
@@ -40,8 +42,8 @@ $dark-gray: #8a8a8a !default;
 
 // ========== Global ========== //
 // Text color of the body.
-$global-font-color: #34495e !default;
-// $global-font-color: $black !default;
+// $global-font-color: #34495e !default;
+$global-font-color: $pure-black !default;
 
 // Font size attribute applied to '<html>' and '<body>'.
 $global-font-size: 16px !default;

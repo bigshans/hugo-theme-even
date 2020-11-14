@@ -190,3 +190,28 @@
   content: "\e906";
 }
 */
+
+
+/* Header Icons */
+.fa {
+    font: normal normal normal 14px/1 FontAwesome;
+
+    * {
+        font-style: normal;
+    }
+    .fa-home::before {
+        content: "\f015";
+    }
+
+    .fa-tags::before {
+        content: "\f02c";
+    }
+
+    .fa-categories::before {
+        content: "\f00a";
+    }
+
+    .fa-archives::before {
+        content: "\f187";
+    }
+}

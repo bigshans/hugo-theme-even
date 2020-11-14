@@ -18,7 +18,19 @@
   <ul class="mobile-menu-list">
     {{ range .Site.Menus.main -}}
       <a href="{{ .URL | safeURL }}">
-        <li class="mobile-menu-item">{{ .Name }}</li>
+        <li class="mobile-menu-item fa">
+          {{ if eq .Identifier "home" }}
+            <i class="fa-home"></i>
+          {{ else if eq .Identifier "archives" }}
+            <i class="fa-archives"></i>
+          {{ else if eq .Identifier "tags" }}
+            <i class="fa-tags"></i>
+          {{ else if eq .Identifier "categories" }}
+            <i class="fa-categories"></i>
+          {{ end }}
+
+          {{ .Name }}
+        </li>
       </a>
     {{- end }}
   </ul>

@@ -12,6 +12,17 @@
   <ul id="menu" class="menu">
     {{ range .Site.Menus.main -}}
       <li class="menu-item">
+        <span class="fa">
+          {{ if eq .Identifier "home" }}
+            <i class="fa-home"></i>
+          {{ else if eq .Identifier "archives" }}
+            <i class="fa-archives"></i>
+          {{ else if eq .Identifier "tags" }}
+            <i class="fa-tags"></i>
+          {{ else if eq .Identifier "categories" }}
+            <i class="fa-categories"></i>
+          {{ end }}
+        </span>
         <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
       </li>
     {{- end }}

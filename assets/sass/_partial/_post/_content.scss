@@ -104,12 +104,25 @@
 
   .read-more {
     .read-more-link {
-      color: $theme-color;
+      // color: $theme-color;
+      color: #222;
       font-size: 1.1em;
       font-family: $global-serif-font-family;
+      border: 1px solid #222;
+      border-radius: 2px;
+      padding: 0 20px;
+      line-height: 2;
+      transition-property:: background-color;
+      transition-delay: 0s;
+      transform-animation-duration: 0.2s;
+      transition-timing-function: ease-int-out;
+      text-align: center;
     
       &:hover {
-        border-bottom: $post-readMore-border-bottom;
+        // border-bottom: $post-readMore-border-bottom;
+        background-color: #222;
+        border-color: #222;
+        color: #fff;
       }
     }
   }

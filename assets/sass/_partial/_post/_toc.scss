@@ -44,6 +44,13 @@
       .has-active > ul {
         display: block;
       }
+
+      a::before {
+        content: "|";
+        font-weight: bolder;
+        margin-right: .5rem;
+        color: $theme-color;
+      }
     }
 
     .toc-link.active {

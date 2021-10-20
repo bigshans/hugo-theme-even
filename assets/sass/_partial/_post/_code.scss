@@ -41,7 +41,7 @@ figure.highlight {
   }
 
   @each $sign, $text in $code-type-list {
-    &.#{$sign} > table::after {
+    &.#{to-lower-case($sign)} > table::after {
       content: $text;
     }
   }

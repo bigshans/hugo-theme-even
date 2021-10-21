@@ -139,7 +139,7 @@ h1 {
 
 @for $i from 1 through 6 {
     h#{$i} {
-        font-weight: bold !important;
+        font-weight: 600 !important;
     }
 }
 

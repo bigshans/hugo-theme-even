@@ -99,30 +99,29 @@
   @import 'admonition';
 
   .post-summary {
-    margin-bottom: 1em;
+    margin-bottom: .5em;
   }
 
   .read-more {
     .read-more-link {
-      // color: $theme-color;
-      color: #222;
-      font-size: 1.1em;
+      color: $theme-color;
+      font-size: 0.875rem;
       font-family: $global-serif-font-family;
-      border: 1px solid #222;
-      border-radius: 2px;
-      padding: 0 20px;
-      line-height: 2;
-      // transition-property: $content-background-color;
+      // border: 1px solid #c05b4d;
+      // border-radius: 2px;
+      // padding: 4px 0;
+      // line-height: 2;
+      transition-property: $theme-color;
       transition-delay: 0s;
-      transform-animation-duration: 0.2s;
+      // transform-animation-duration: 0.2s;
       transition-timing-function: ease-int-out;
       text-align: center;
     
       &:hover {
-        // border-bottom: $post-readMore-border-bottom;
-        background-color: #222;
-        border-color: #222;
-        color: #fff;
+        border-bottom: $post-readMore-border-bottom;
+        // background-color: #c05b4d;
+        // border-color: #c05b4d;
+        // color: #fff;
       }
     }
   }

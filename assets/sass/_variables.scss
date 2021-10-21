@@ -58,22 +58,22 @@ $global-container-padding: 0 20px !default;
 $global-lineheight: 1.5 !default;
 
 // Font family of the site.
-$global-font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif !default;
+$global-font-family: -apple-system, BlinkMacSystemFont, Monaco, monospace, Helvetica Neue, Arial, Segoe UI, PingFang SC, Microsoft Yahei, Hiragino Sans GB, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
 
 // Serif font family of the site.
-$global-serif-font-family: Athelas, STHeiti, Microsoft Yahei, serif !default;
+$global-serif-font-family: "Roboto Slab", "Monda", "PingFang SC", "Microsoft YaHei", "Monaco", sans-serif serif !default;
 
 // Background color of the site.
 $global-background: $white !default;
 
 // Headings font size of the site.
 $global-headings: (
-  h1: 35px,
-  h2: 32px,
-  h3: 30px,
-  h4: 28px,
-  h5: 26px,
-  h6: 26px
+  h1: 25px,
+  h2: 22px,
+  h3: 20px,
+  h4: 18px,
+  h5: 16px,
+  h6: 16px
 ) !default;
 
 
@@ -124,7 +124,7 @@ $post-padding: 1.5em 0 !default;
 $post-border: 1px solid $light-gray !default;
 
 // Font size of post title.
-$post-title-font-size: 35px !default;
+$post-title-font-size: 25px !default;
 
 // Font weight of post title.
 $post-title-font-weight: 400 !default;
@@ -198,7 +198,7 @@ $code-color: #c7254e !default;
 $code-font-size: 0.9em !default;
 
 // Font family of the code.
-$code-font-family: Consolas, Monaco, Menlo, "DejaVu Sans Mono",
+$code-font-family: 'FiraCode Nerd font', Consolas, Monaco, Menlo, "DejaVu Sans Mono",
  "Bitstream Vera Sans Mono", "Courier New", monospace !default;
 
 // Color of code highlight, solarized.

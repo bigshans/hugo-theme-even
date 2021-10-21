@@ -54,8 +54,9 @@
     }
 
     .toc-link.active {
-      color: $theme-color;
-      text-decoration: underline $theme-color;
+        color: $theme-color;
+      // text-decoration: underline $theme-color;
+      text-decoration: none;
     }
   }
 }

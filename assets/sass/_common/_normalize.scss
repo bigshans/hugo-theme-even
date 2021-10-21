@@ -137,6 +137,12 @@ h1 {
   margin: 0.67em 0;
 }
 
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-weight: bold !important;
+    }
+}
+
 /**
  * Address styling not present in IE 8/9.
  */

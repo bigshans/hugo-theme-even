@@ -74,6 +74,16 @@
 <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
 {{ end }}
 
+{{ if .Params.mermaid }}
+<style>
+  /* Set svg to center */
+  .mermaid svg {
+    display: block;
+    margin: auto;
+  }
+</style>
+{{ end }}
+
 {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/google_news.html" . -}}

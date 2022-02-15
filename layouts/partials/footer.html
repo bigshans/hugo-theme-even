@@ -48,3 +48,14 @@
     --><span>{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
   </span>
 </div>
+{{ if .Params.mermaid }}
+<script src="https://unpkg.com/mermaid@8.14.0/dist/mermaid.min.js"></script>
+<script>
+  // Replace mermaid pre.code to div
+  Array.from(document.getElementsByClassName("language-mermaid")).forEach(
+    (el) => {
+      el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`;
+    }
+  );
+</script>
+{{ end }}

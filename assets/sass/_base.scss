@@ -15,6 +15,11 @@ body {
   line-height: $global-lineheight;
   color: $global-font-color;
   background: $global-background;
+  background-image: url(https://raw.githubusercontent.com/bigshans/pictures/master/202202161612438.webp);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-attachment: fixed;
+  background-size: 500px;
   scroll-behavior: smooth;
   // border-top: 3px solid $theme-color;
   // border-top: 3px solid #000000;

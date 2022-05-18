@@ -92,6 +92,9 @@
       tr:hover {
         background-color: $deputy-color;
       }
+      tr:before {
+          display: none; // 清除 pandoc 的 before
+      }
     }
   }
 

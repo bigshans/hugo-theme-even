@@ -41,8 +41,14 @@ figure.highlight {
   }
 
   @each $sign, $text in $code-type-list {
-    &.#{to-lower-case($sign)} > table::after {
+    &.language-#{to-lower-case($sign)} > table::after {
       content: $text;
+    }
+  }
+
+  @each $sign, $text in $code-type-list {
+    &.sourceCode.#{to-lower-case($sign)} > table::after {
+        content: $text;
     }
   }
 

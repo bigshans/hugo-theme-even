@@ -192,6 +192,17 @@ img {
 }
 
 /**
+ * Make picture in center
+ */
+figure {
+    text-align: center;
+}
+
+figure figcaption {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/**
  * Correct overflow not hidden in IE 9/10/11.
  */
 

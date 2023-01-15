@@ -198,6 +198,10 @@ figure {
     text-align: center;
 }
 
+figure table {
+    text-align: left !important;
+}
+
 figure figcaption {
     color: rgba(0, 0, 0, 0.7);
 }

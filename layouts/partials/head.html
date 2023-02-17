@@ -11,7 +11,9 @@
 
 <!-- author & description & keywords  -->
 <meta name="author" content="{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}" />
-
+{{ if .Params.private }}
+  <meta name="description" content="私人文章" />
+{{ else }}
 {{- if .Description -}}
   <meta name="description" content="{{ .Description | safeHTML }}" />
 {{- else if .IsPage -}}
@@ -27,6 +29,8 @@
   {{ $length := len .Site.Params.keywords | add -1 -}}
   <meta name="keywords" content="{{ range $index, $element := .Site.Params.keywords }}{{ $element | safeHTML }}{{if ne $index $length }}, {{ end }}{{ end }}" />
 {{- end }}
+
+{{ end }}
 
 <!-- baidu & google verification  -->
 {{ with .Site.Params.baiduVerification }}<meta name="baidu-site-verification" content="{{.}}" />{{ end }}
@@ -85,10 +89,13 @@
 {{ end }}
 
 {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
+{{ if .Params.private }}
+{{ else }}
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/google_news.html" . -}}
 {{- template "_internal/schema.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
+{{ end }}
 
 <!-- Polyfill for old browsers -->
 {{ `<!--[if lte IE 9]>

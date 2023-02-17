@@ -19,7 +19,11 @@
   <!-- Content -->
   <div class="post-content">
     <div class="post-summary">
+    {{ if .Params.private }}
+        私人文章
+    {{ else }}
       {{ .Summary | plainify }}
+    {{ end }}
     </div>
     <div class="read-more">
       <a href="{{ .RelPermalink }}" class="read-more-link">{{ T "readMore" }} »</a>

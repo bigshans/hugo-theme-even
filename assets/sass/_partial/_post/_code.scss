@@ -15,6 +15,22 @@ pre > code {
   display: block;
 }
 
+.hljs-copy {
+    background: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 999;
+    cursor: pointer;
+    border: #888 solid 1px;
+    border-radius: 5px;
+}
+
+.sourceCode {
+  position: relative;
+}
+
 // highlight.js
 figure.highlight {
   margin: 1em 0;
@@ -53,6 +69,8 @@ figure.highlight {
   }
 
   .code {
+    position: relative;
+
     pre {
       margin: 0;
       padding: 30px 10px 10px;

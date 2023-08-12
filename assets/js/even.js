@@ -144,6 +144,7 @@ Even.highlight = function() {
   const blocks = document.querySelectorAll('pre code');
   for (let i = 0; i < blocks.length; i++) {
     const block = blocks[i];
+    const code = block.textContent;
     const rootElement = block.parentElement;
     const lineCodes = block.innerHTML.split(/\n/);
     if (lineCodes[lineCodes.length - 1] === '') lineCodes.pop();
@@ -164,7 +165,33 @@ Even.highlight = function() {
     figure.className = block.className;
     figure.innerHTML = `<table><tbody><tr><td class="gutter"><pre>${codeLineHtml}</pre></td><td class="code"><pre>${codeHtml}</pre></td></tr></tbody></table>`;
 
-    rootElement.parentElement.replaceChild(figure, rootElement);
+    const copyBtn = document.createElement('button');
+    copyBtn.classList.add('hljs-copy');
+    copyBtn.textContent = 'Copy';
+    let lock = false;
+    copyBtn.addEventListener('click', async function () {
+      if (lock) return;
+      lock = true;
+      this.textContent = 'Copy..';
+      if (!navigator.userAgent.toLowerCase().includes('safari')) {
+          await navigator.clipboard.writeText(code);
+      } else {
+          prompt("Clipboard (Select: ⌘+a > Copy:⌘+c)", code);
+      }
+      this.textContent = 'Copied!';
+      setTimeout(() => {
+        this.textContent = 'Copy';
+        lock = false;
+      }, 1000);
+    });
+
+    const p = rootElement.parentElement;
+    p.replaceChild(figure, rootElement);
+    if (p.classList.contains('sourceCode')) {
+      p.appendChild(copyBtn);
+    } else {
+      figure.appendChild(copyBtn);
+    }
   }
 };
 

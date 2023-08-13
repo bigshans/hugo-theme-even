@@ -186,11 +186,15 @@ Even.highlight = function() {
     });
 
     const p = rootElement.parentElement;
-    p.replaceChild(figure, rootElement);
     if (p.classList.contains('sourceCode')) {
-      p.appendChild(copyBtn);
+        p.replaceChild(figure, rootElement);
+        p.appendChild(copyBtn);
     } else {
-      figure.appendChild(copyBtn);
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('sourceCode');
+        wrapper.appendChild(figure);
+        wrapper.appendChild(copyBtn);
+        p.replaceChild(wrapper, rootElement);
     }
   }
 };
